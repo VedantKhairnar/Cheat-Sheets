@@ -37,4 +37,5 @@ List of Data Science Cheatsheets :
 Nt : All these cheatsheets are taken from a variety of sources. Sorry for not having references. :(
 
 Regards,
+
 [Vedant Khairnar](http://vedantkhairnar.ml/)
