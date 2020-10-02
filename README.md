@@ -34,9 +34,9 @@ List of Data Science Cheatsheets :
 - [Statistics](Statistics/README.md)
 
 
-Nt : All these cheatsheets are taken from a variety of sources.
+Note : All these cheatsheets are taken from a variety of sources.
 [Primary Source](https://github.com/abhat222/Data-Science--Cheat-Sheet)
 
 Regards,
 
-[Vedant Khairnar](http://vedantkhairnar.ml/)
+[Vedant Khairnar](http://vedantkhairnar.ml/) and team.
