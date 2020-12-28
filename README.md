@@ -5,9 +5,12 @@
 List of Data Science Cheatsheets :
 
 ## Table of Contents
+- [Algorithm](https://github.com/smriti1313/Cheat-Sheets/blob/master/Algorithms/Algorithms.pdf)
 - [Artificial Intelligence](Artificial%20Intelligence/README.md)
+- [Azure](https://github.com/smriti1313/Cheat-Sheets/blob/master/Azure/azure.png)
 - [Big Data](Big%20Data/README.md)
-- [C#]()
+- [Business Analysis](https://github.com/smriti1313/Cheat-Sheets/blob/master/BusinessAnalysis/CBAP.pdf)
+- [C#](https://github.com/smriti1313/Cheat-Sheets/blob/master/C%23/README.md)
 - [Data Engineering](Data%20Engineering/README.md)
 - [Data Mining](Data%20Mining/README.md)
 - [Data Science](Data%20Science/README.md)
