@@ -19,7 +19,7 @@ function Topic(props) {
                 console.log(err);
                 setStatus("error");
             });
-    }, [])
+    }, [props.topic.url])
 
     function goBack() {
         props.setIsTopic(current => !current);
@@ -35,7 +35,7 @@ function Topic(props) {
                         <div className="Topic-body">
                             {
                                 data.map(d => (
-                                    <a key={d.name} className="Topic-Link" href={d.html_url} target="_">{d.name}</a>
+                                    <a key={d.name} className="Topic-Link" href={d.html_url} target="_blank" rel="noreferrer">{d.name}</a>
                                 ))
                             }
                             {

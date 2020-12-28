@@ -42,3 +42,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 715px) {
+  .Header {
+    flex-direction: column;
+    height: fit-content;
+  }
+}

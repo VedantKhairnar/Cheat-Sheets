@@ -26,7 +26,7 @@ function Header() {
                 >
                     About Us
                 </Link>
-                <a href="https://github.com/VedantKhairnar/Cheat-Sheets" className="nav-links" target="_">
+                <a href="https://github.com/VedantKhairnar/Cheat-Sheets" className="nav-links" target="_blank" rel="noreferrer">
                     GitHub Repo
                 </a>
             </nav>
