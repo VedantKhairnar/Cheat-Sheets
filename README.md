@@ -19,6 +19,7 @@ List of Data Science Cheatsheets :
 - [Git](Git/README.md)
 - [Images](Images//README.md)
 - [Interview Questions](Interview%20Questions/README.md)
+- [Java](https://github.com/smriti1313/Cheat-Sheets/blob/master/Java/README.md)
 - [Linux](Linux/README.md)
 - [Machine Learning](https://github.com/abhat222/Data-Science--Cheat-Sheet#machine-learning)
 - [Mathematics](Mathematics/README.md)
