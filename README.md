@@ -32,6 +32,7 @@ List of Data Science Cheatsheets :
 - [Scala](Scala/README.md)
 - [SQL](SQL/README.md)
 - [Statistics](Statistics/README.md)
+- [Web Development](Web%20Development/cheatsheets.md)
 
 
 Note : All these cheatsheets are taken from a variety of sources.
