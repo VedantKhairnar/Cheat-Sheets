@@ -31,9 +31,13 @@ List of Data Science Cheatsheets :
 - [Pandas](Pandas/README.md)
 - [Probability](Probability/README.md)
 - [Python](Python/README.md)
+- [R](https://github.com/smriti1313/Cheat-Sheets/blob/master/R%20Cheat%20Sheet/README.md)
+- [Regular Expression](https://github.com/smriti1313/Cheat-Sheets/blob/master/Regular_Expresion/README.md)
 - [Scala](Scala/README.md)
 - [SQL](SQL/README.md)
 - [Statistics](Statistics/README.md)
+- [Quant](https://github.com/smriti1313/Cheat-Sheets/blob/master/Quant/QT%20Cheatsheet.pdf)
+- [Quantum Computing](https://github.com/smriti1313/Cheat-Sheets/blob/master/QuantumComputing/quantum_computing.pdf)
 
 
 Note : All these cheatsheets are taken from a variety of sources.
