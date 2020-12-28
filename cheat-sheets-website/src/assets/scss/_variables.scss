@@ -1,0 +1,20 @@
+$dark-blue: #12232e;
+$mid-blue: #007cc7;
+$light-blue: #4da8da;
+$shadow-dark-blue: #203647;
+$white-blue: #eefbfb;
+
+// Credits: https://hookagency.com/website-color-schemes/
+
+.text-box {
+  background-color: #f8f8f8;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: inset 1px 0 5px 1px $shadow-dark-blue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

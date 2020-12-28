@@ -1,0 +1,15 @@
+@import '../../assets/scss/variables';
+
+.AboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark-blue;
+  background-color: $white-blue;
+  min-height: 93vh;
+  padding: 1rem 3rem;
+
+  &-title {
+    font-size: 2rem;
+  }
+}

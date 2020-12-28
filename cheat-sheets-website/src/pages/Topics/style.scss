@@ -1,0 +1,42 @@
+@import '../../assets/scss/variables';
+
+.Topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark-blue;
+  background-color: $white-blue;
+  min-height: 93vh;
+  padding: 1rem 3rem;
+
+  &-title {
+    text-align: center;
+    margin: 1rem;
+    font-size: 3rem;
+  }
+
+  &-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 1.5rem;
+
+    .Topics-Button {
+      margin: 23px 10px;
+      padding: 7px 32px;
+      border-radius: 15px;
+      color: $dark-blue;
+      text-align: center;
+      width: fit-content;
+      background-color: whitesmoke;
+      box-shadow: inset 1px 1px 5px rgb(209, 209, 209);
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.07);
+        transition-duration: 0.5s;
+        box-shadow: inset 1px 1px 3px grey, inset -1px -1px 3px grey;
+      }
+    }
+  }
+}
