@@ -1,9 +1,8 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Header from './components/Header';
 import Topics from './pages/Topics';
 import AboutUs from './pages/AboutUs';
-import Topic from './pages/Topic';
 import NotFound from './pages/NotFound';
 
 function App() {
