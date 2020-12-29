@@ -1,0 +1,41 @@
+@import '../../assets/scss/variables';
+
+.Topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark-blue;
+  background-color: $white-blue;
+  min-height: 93vh;
+  padding: 1rem 3rem;
+
+  &-back {
+    cursor: pointer;
+    margin-right: auto;
+    font-size: 2rem;
+  }
+
+  &-title {
+    font-size: 2rem;
+  }
+
+  &-body {
+    background-color: whitesmoke;
+    box-shadow: inset 1px 1px 5px rgb(209, 209, 209);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 25px;
+  }
+
+  &-Link {
+    margin: 0.3rem 0;
+  }
+
+  &-Link {
+    font-size: 1.5rem;
+  }
+}

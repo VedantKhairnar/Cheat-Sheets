@@ -1,0 +1,51 @@
+@import '../../assets/scss/variables';
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $mid-blue;
+  color: $white-blue;
+  height: 7vh;
+  padding: 0rem 3rem;
+
+  .logo {
+    font-size: 4.5vh;
+    cursor: pointer;
+  }
+
+  .nav {
+    display: flex;
+    height: 7vh;
+    align-items: flex-end;
+
+    &-links {
+      display: flex;
+      align-items: center;
+      height: 6vh;
+      margin: 0 7px;
+      font-size: 2.5vh;
+      padding: 0 0.7rem;
+      border-radius: 25px 25px 0 0;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $light-blue;
+      }
+    }
+
+    .active {
+      background-color: $light-blue;
+      box-shadow: inset 1px 1px 5px $shadow-dark-blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .Header {
+    flex-direction: column;
+    height: fit-content;
+  }
+}

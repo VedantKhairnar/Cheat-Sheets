@@ -1,0 +1,58 @@
+@import '../../assets/scss/variables';
+
+.AboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark-blue;
+  background-color: $white-blue;
+  min-height: 93vh;
+  padding: 1rem 3rem;
+
+  &-title {
+    font-size: 2rem;
+  }
+
+  &-body {
+    margin: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.Contributors {
+  margin: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  &-box {
+    margin: 23px 10px;
+    padding: 7px 32px;
+    border-radius: 15px;
+    color: $dark-blue;
+    text-align: center;
+    width: fit-content;
+    background-color: whitesmoke;
+    box-shadow: inset 1px 1px 5px rgb(209, 209, 209);
+    cursor: pointer;
+
+    .name {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 100%;
+      // border: 3px solid $dark-blue;
+      box-shadow: 1px 1px 5px $shadow-dark-blue;
+      margin: 11px;
+    }
+
+    &:hover {
+      transform: scale(1.07);
+      transition-duration: 0.5s;
+      box-shadow: inset 1px 1px 3px grey, inset -1px -1px 3px grey;
+    }
+  }
+}
