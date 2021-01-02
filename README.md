@@ -45,7 +45,7 @@ List of Data Science Cheatsheets :
 - [Spring](https://github.com/sandeep1324/Cheat-Sheets/blob/master/Spring/Spring-framework-4.pdf)
 - [SQL](SQL/README.md)
 - [Statistics](Statistics/README.md)
-- [Web Development](Web%20Development/cheatsheets.md
+- [Web Development](Web%20Development/cheatsheets.md)
 - [Quant](https://github.com/smriti1313/Cheat-Sheets/blob/master/Quant/QT%20Cheatsheet.pdf)
 - [Quantum Computing](https://github.com/smriti1313/Cheat-Sheets/blob/master/QuantumComputing/quantum_computing.pdf)
 
