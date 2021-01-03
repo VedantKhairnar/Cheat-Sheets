@@ -1,6 +1,6 @@
 # Flask Cheat Sheet
 
-- [Flask Cheat Sheet 1](https://github.com/lucrae/flask-cheat-sheet)
+- [Flask Cheat Sheet 1](https://github.com/lucrae/flask-cheat-sheet)[A cheat-sheet for creating web apps with the Flask framework using the Python language.]
 
 - [Flask Cheat Sheet 2](https://prettyprinted.com/flaskcheatsheet)
 
