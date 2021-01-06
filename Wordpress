@@ -1,0 +1,281 @@
+<?php wp_head(); ?>      // end of header section.
+<?php wp_footer(); ?>   //end of footer section.
+
+// Include style and escript in wordpress
+<?php 
+if(! function_exists('hasan_theme_scripts')){
+		add_action('wp_enqueue_scripts','hasan_theme_scripts');
+		function hasan_theme_scripts(){
+			wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap.min.css', array(),'1.0.0','all');
+		
+			wp_enqueue_script('jquery');
+			wp_enqueue_script('swiper', get_template_directory_uri().'/js/swiper.min.js','jquery','1.0.0',false);
+		}
+	}
+?>
+<!--= Register TEXONOMY  IN WORDPRESS  =  -->
+<?php
+if(! function_exists('hasan_portfolio_taxonomy')) {
+
+add_action( 'init', 'hasan_portfolio_taxonomy' );
+    function hasan_portfolio_taxonomy() {
+        $labels = array(
+            'name'              => _x( 'Portfolio Category', 'portfolio category', 'hasan-unique' ),
+            'singular_name'     => _x( 'Category', 'category', 'cit-unique' )
+        );
+
+        $args = array(
+            'hierarchical'      => true,
+            'labels'            => $labels,
+            'show_ui'           => true,
+            'query_var'         => true,
+            'rewrite'           => array( 'slug' => 'portfolio-cat' ),
+        );
+
+        register_taxonomy( 'portfolios_cat', array( 'hasan-portfolio' ), $args );
+
+    }
+  }
+
+<!--= Register nav menu in wordpress =  -->
+<?php
+  if(! function_exists('hasan_initilize')){
+	add_action('after_setup_theme','hasan_initilize');
+	function hasan_initilize(){
+		register_nav_menus( array(
+			'primary_menu' => __('Header Menu','hasan')
+		));
+	}
+    //Add theme Support in wordpress
+	add_theme_support('post-thumbnails');
+}
+<!--============= Show nav menu in wordpress ================  -->
+?>
+<?php
+  if(has_nav_menu('theme_location')){
+    wp_nav_menu(array(
+      'theme_location' => 'primary_menu',
+          'menu_class'	=> 'nav navbar-nav'
+        ));			
+  }else{
+    echo '<a href="'.home_url().'/wp-admin/nav-menus.php" style="margin-top:20px; font-size:20px; color:red;" >Select Menu</a>';
+  }
+
+?>
+<!--============= REGISTER POST TYPE  in wordpress ================  -->
+<?php
+  function hasan_custom_slider(){
+    $args = array(
+      'label' => __('Slider','hasan'),
+      'menu_icon' => 'dashicons-welcome-view-site',
+      'public' => true,
+      'supports' => array('title','editor','thumbnail')
+    );
+    register_post_type('hasan_slider', $args);
+  }
+
+  add_action('init','hasan_custom_slider');
+
+?>
+<!--============= SHOW SLIDER IN WORDPRESS  ================  -->
+			<?php 
+					$query = new WP_Query(array(
+						'post_type' => 'hasan_slider',
+						'post_per_page' => -1
+					));
+
+			?>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<?php while($query->have_posts()): $query->the_post();
+						$image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'full');
+					 ?>
+					<div class="swiper-slide slide_one" style="background-image: url(<?php echo $image['0']; ?>);">
+						<div class="slide-text">
+							<?php the_excerpt(); ?>
+						</div>
+					</div>
+					<?php endwhile; ?>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</header><!-- Top Area End -->
+
+
+
+<?php
+/*========== Portfolio Section In WORDPRESS ===========*/
+
+add_action('init','portfolio_custom_post_type');
+
+
+function portfolio_custom_post_type() {
+	$labels = array(
+		'name'               => _x( 'Portfolios', 'portfolios', 'hasan-unique' ),
+		'singular_name'      => _x( 'Portfolio', 'portfolio', 'hasan-unique' ),
+		'menu_name'          => _x( 'Portfolios', 'portfolios', 'hasan-unique' ),
+		'name_admin_bar'     => _x( 'Portfolio', 'portfolio', 'hasan-unique' ),
+		'add_new'            => _x( 'Add New', 'portfolio', 'hasan-unique' ),
+		'add_new_item'       => __( 'Add New Portfolio', 'hasan-unique' ),
+		'new_item'           => __( 'New Portfolio', 'hasan-unique' ),
+		'edit_item'          => __( 'Edit Portfolio', 'hasan-unique' ),
+		'view_item'          => __( 'View Portfolio', 'hasan-unique' ),
+		'all_items'          => __( 'All Portfolios', 'hasan-unique' ),
+		'search_items'       => __( 'Search Portfolios', 'hasan-unique' ),
+		'parent_item_colon'  => __( 'Parent Portfolios:', 'hasan-unique' ),
+		'not_found'          => __( 'No books found.', 'hasan-unique' ),
+		'not_found_in_trash' => __( 'No books found in Trash.', 'hasan-unique' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'description'        => __( 'Description.', 'hasan-unique' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'hasan-portfolio' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+	);
+
+	register_post_type( 'hasan-portfolio', $args );
+}
+?>
+
+<!--============= Register TEXONOMY  IN WORDPRESS  ================  -->
+<?php
+if(! function_exists('hasan_portfolio_taxonomy')) {
+
+add_action( 'init', 'hasan_portfolio_taxonomy' );
+    function hasan_portfolio_taxonomy() {
+        $labels = array(
+            'name'              => _x( 'Portfolio Category', 'portfolio category', 'hasan-unique' ),
+            'singular_name'     => _x( 'Category', 'category', 'cit-unique' )
+        );
+
+        $args = array(
+            'hierarchical'      => true,
+            'labels'            => $labels,
+            'show_ui'           => true,
+            'query_var'         => true,
+            'rewrite'           => array( 'slug' => 'portfolio-cat' ),
+        );
+
+        register_taxonomy( 'portfolios_cat', array( 'hasan-portfolio' ), $args );
+
+    }
+}
+<!--============= SHOW PORTFOLIO IN WORDPRESS  ================  -->
+?>
+<?php
+<section class="portfolios-area fix" id="portfolios">
+	<div class="container_auto">
+		<!-- Section Title -->
+		<div class="section-title text-center">
+			<h2>OUR RECENT POROJECTS</h2>
+			<div class="line-centered"></div>
+		</div>
+		
+		<?php
+
+			$terms = get_terms( 'portfolios_cat' );
+			if(!empty($terms) && !is_wp_error( $terms )){
+				echo '<ul class="filters-tab clearfix">';
+				echo '<li class="filter" data-filter="all">All</li>';
+				foreach ($terms as $term) {
+					echo '<li class="filter" data-filter=".'.$term->slug.'">'.$term->name.'</li>';
+				}
+				echo '</ul>';
+			}
+		?>	
+		<!-- Images Container -->
+		<div class="images-container wow fadeInUp">
+			<div class="filter-list clearfix">
+				  <?php 
+                global $post;
+                $args = array('post_type' => 'unique-portfolio', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC');
+                $myposts = get_posts($args);
+                foreach($myposts as $post) : setup_postdata($post);
+                $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full');
+            ?>
+  				<?php
+                $terms = get_the_terms( $post->ID, 'portfolios_cat');
+                    
+                if($terms && !is_wp_error($terms)):
+
+                    $portfolio_cat_slug = array();
+                    foreach( $terms as $term ){
+                        $portfolio_cat_slug[] = $term->slug;
+                    }
+
+                    $portfolio_cat_array = join(", ", $portfolio_cat_slug);
+                    $portfolio_class_array = join(" ", $portfolio_cat_slug);
+                endif;
+               ?>
+				<div class="single-portfolio mix <?php echo $portfolio_cat_array; ?>"><!-- Single Portfolio Item -->
+					<figure class="image">
+						<a href="#" title="Business">
+							<img src="<?php echo esc_url($image[0]);?>" alt="<?php the_title();?>" />
+						</a>
+						<div class="portfolio-hover">
+							<div class="hover-table">
+								<div class="hover-tablecell">
+									<a href="<?php echo esc_url($image[0]); ?>" alt="<?php the_title(); ?>" class="lightbox"><i class="fa fa-search-plus"></i></a>
+									<a href="#"><i class="fa fa-link"></i></a>
+								</div>
+							</div>
+						</div>
+					</figure>
+				</div><!-- Single Portfolio Item End -->
+				<?php  endforeach; ?>
+			
+			</div>
+		</div>
+	</div>
+</section>
+
+?>
+<!--============= DEFAULT SETTING IN CODESTER FRAMEWORK IN WORDPRESS  ================  -->
+<?php
+if( !defined('ABSPATH')) die;
+
+add_filter( 'cs_framework_settings','hasan_theme_options_settings' );
+function hasan_theme_options_settings($settings){
+
+	$settings 	= array(
+		'menu_title' => 'Theme Options',
+		'menu_type'  => 'menu',
+		'menu_slug'  => 'theme-options',
+		'ajax_save'	 => false,
+		'show_reset_all' => false,
+		'framework_title' => ' theme options<small>Hasan</small>',
+	);
+	return $settings;
+}
+
+add_filter( 'cs_framework_options', 'meteor_theme_options' );
+function meteor_theme_options($settings) {
+    $settings = array();
+    
+    $settings[]    = array(
+        'name'      => 'footer_options',
+        'title'     => 'Footer',
+        'icon'      => 'fa fa-angle-down',
+        'fields'    => array(
+          array(
+            'id'    => 'footer_cpt',
+            'type'  => 'wysiwyg',
+            'title' => __('Footer Copy Right Text', 'meteor'),
+          )
+        )
+    );
+    return $settings;
+}
+
+?>
