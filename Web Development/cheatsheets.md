@@ -15,3 +15,14 @@
 - [NodeJS Cheatsheet](https://overapi.com/nodejs)
 
 - [PHP Cheatsheet](https://websitesetup.org/wp-content/uploads/2020/09/PHP-Cheat-Sheet.pdf)
+
+- [Bootstrap Cheatsheet](https://hackerthemes.com/bootstrap-cheatsheet/)
+
+- [ExpressJS Cheatsheet](https://devhints.io/express)
+
+- [ReactJS Cheatsheet](http://www.developer-cheatsheets.com/react)
+
+- [MongoDB Cheatsheet](https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6)
+
+- [Redux Cheatsheet](https://devhints.io/redux)
+
