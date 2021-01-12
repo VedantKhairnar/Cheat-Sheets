@@ -1,0 +1,13 @@
+@import '../../assets/scss/variables';
+
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: $dark-blue;
+  background-color: $white-blue;
+  min-height: 93vh;
+  padding: 1rem 3rem;
+}
