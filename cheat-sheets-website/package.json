@@ -1,5 +1,5 @@
 {
-  "homepage": "http://vedantkhairnar.ml/Cheat-Sheets/",
+  "homepage": "http://VedantKhairnar.github.io/Cheat-Sheets/",
   "name": "cheat-sheets-website",
   "version": "0.1.0",
   "private": true,
@@ -8,7 +8,6 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
-    "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -18,6 +17,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
