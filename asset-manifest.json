@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Cheat-Sheets/static/css/main.b0de0405.chunk.css",
+    "main.js": "/Cheat-Sheets/static/js/main.3e687aab.chunk.js",
+    "main.js.map": "/Cheat-Sheets/static/js/main.3e687aab.chunk.js.map",
+    "runtime-main.js": "/Cheat-Sheets/static/js/runtime-main.d357a459.js",
+    "runtime-main.js.map": "/Cheat-Sheets/static/js/runtime-main.d357a459.js.map",
+    "static/js/2.cc1a6c1c.chunk.js": "/Cheat-Sheets/static/js/2.cc1a6c1c.chunk.js",
+    "static/js/2.cc1a6c1c.chunk.js.map": "/Cheat-Sheets/static/js/2.cc1a6c1c.chunk.js.map",
+    "static/js/3.95146729.chunk.js": "/Cheat-Sheets/static/js/3.95146729.chunk.js",
+    "static/js/3.95146729.chunk.js.map": "/Cheat-Sheets/static/js/3.95146729.chunk.js.map",
+    "index.html": "/Cheat-Sheets/index.html",
+    "static/css/main.b0de0405.chunk.css.map": "/Cheat-Sheets/static/css/main.b0de0405.chunk.css.map",
+    "static/js/2.cc1a6c1c.chunk.js.LICENSE.txt": "/Cheat-Sheets/static/js/2.cc1a6c1c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d357a459.js",
+    "static/js/2.cc1a6c1c.chunk.js",
+    "static/css/main.b0de0405.chunk.css",
+    "static/js/main.3e687aab.chunk.js"
+  ]
+}
