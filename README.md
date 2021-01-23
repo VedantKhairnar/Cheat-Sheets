@@ -60,8 +60,6 @@ List of Data Science Cheatsheets :
 - [Quant](https://github.com/smriti1313/Cheat-Sheets/blob/master/Quant/QT%20Cheatsheet.pdf)
 - [Quantum Computing](https://github.com/smriti1313/Cheat-Sheets/blob/master/QuantumComputing/quantum_computing.pdf)
 
-Note : All these cheatsheets are taken from a variety of sources.
-[Primary Source](https://github.com/abhat222/Data-Science--Cheat-Sheet)
 
 ## Contributors 🌟 
 
