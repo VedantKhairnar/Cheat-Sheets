@@ -1,0 +1,511 @@
+
+## Table of Contents
+
+
+- [Aligning widgets evenly](#aligning-widgets-evenly)
+- [Buttons](#buttons)
+- [Navigation](#navigation)
+- [ActionBar](#actionbar)
+
+## Aligning widgets evenly
+  ###   Horizontal MainAxisAlignment
+    Setting the main axis alignment to spaceEvenly divides the free horizontal space 
+    evenly between, before, and after each image
+  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/img1.PNG)
+   ```dart
+   Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    Image.asset('img/1.jpg'),
+    Image.asset('img/2.jpg'),
+    Image.asset('img/3.jpg'),
+  ],
+);
+   ```
+ ###   Vertical MainAxisAlignment
+    Setting the main axis alignment to spaceEvenly divides the free vertical space 
+    evenly between, before, and after each image
+  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/img2.PNG)
+   ```dart
+   Column(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    Image.asset('img/1.jpg'),
+    Image.asset('img/2.jpg'),
+    Image.asset('img/3.jpg'),
+  ],
+);
+ ```
+ ###   Packing Widgets
+    By default, a row or column occupies as much space along its main axis as possible,
+    but if you want to pack the children closely together, set its mainAxisSize to MainAxisSize.min. 
+    The following example uses this property to pack 3 buttons together.
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/Packing-widget.png" width="280"/> 
+   
+   ```dart
+        new Row(
+               mainAxisSize: MainAxisSize.min, // This is the magic. :)
+                children: <Widget>[
+                  new RaisedButton(
+                    padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: onClick, // Button onClick function
+                    child: new Text("Button 1"),
+                  ),
+                  new RaisedButton(
+                    onPressed: subtractNumbers,
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Text(
+                      "Button 2",
+                    ),
+                  ),
+                  new RaisedButton(
+                    onPressed: subtractNumbers,
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Text(
+                      "Button 3",
+                    ),
+                  ),
+                ],
+              )
+ ```
+ 
+ ## Buttons
+ ###  Raised Button Effect
+    A Raised button is based on a Material widget whose Material.elevation increases when the button is pressed.
+    Do you want to add an elevation effect to your button? Use the snippet below
+    Please avoid using elevated buttons on already-elevated content such as dialogs or cards.
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/Raised-button.png" width="280"/> 
+   
+   ```dart
+         new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  new RaisedButton(
+                    padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: onClick, // Button onClick function
+                    child: new Text("Plus"),
+                  ),
+                  new RaisedButton(
+                    onPressed: subtractNumbers,
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Text(
+                      "Minus",
+                    ),
+                  ),
+                ],
+              )
+ ```
+  ###  Toggle Effect
+    You can toggle the color of a raised button with few lines. The snippet below shows how you can achieve this.
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/toggle-button.png" width="280"/> 
+   
+   ```dart
+   1. This button will need to be created in the build of a State of a StatefulWidget
+   2. The State must have a member variable bool isPressed = false;;
+         new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  
+                  new RaisedButton(
+                    child: new Text('Toggle me!'),
+                    textColor: Colors.white,
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30.0),
+                    ),
+                    color: isPressed ? Colors.grey : Colors.blue,
+                    onPressed: () => setState(() => isPressed = !isPressed), // make state changes in a setState
+                  )
+                ],
+              )
+ ```
+ 
+  ###  Floating Action Button
+    Creating a simple FAB using the code snippet below
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/fab-button.png" width="280"/> 
+   
+   ```dart
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text("FAB Example"),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => {},
+          tooltip: 'Add me!',
+          child: Icon(Icons.add),
+        ),
+        body:...
+     );
+ ```
+ ## ActionBar
+ You can use flutter's AppBar just with one line of code.
+ 
+  ```dart
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text("AppBar Demo"),
+        ),);
+        
+   ```    
+ 
+ ## Navigation
+ 
+
+### Bottom Navigation Bar
+Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd write some complex code to make this happen. But see how I achieved it!
+
+#### Create a Bottom Navigation Bar without style
+<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-bar-1.png" width="280"/> 
+   
+   ```dart
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text("FAB Example"),
+        ),
+        bottomNavigationBar:BottomNavigationBar(
+          currentIndex: 0,   // Set initial state of BottomNavigationBar
+          items: [           // Create your BottomNavigationBar items
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.playlist_add),
+              title: new Text("Playlist"),
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.person),
+              title: new Text("My Profile")
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.mail),
+              title: new Text("Inbox")
+            )
+          ],
+        ),
+        body:...
+     );
+ ```
+ #### Create a Bottom Navigation Bar with custom style
+<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-bar-2.png" width="280"/> 
+   
+   ```dart
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text("FAB Example"),
+        ),
+            bottomNavigationBar: Theme(  // Create your custom style with Flutter Theme
+          data: Theme.of(context).copyWith(
+              canvasColor: Colors.blueAccent, // Choose your preferred color as the BottomNavigationBar background
+              primaryColor: Colors.white30, // Choose your preferred color as the primary color
+              textTheme: Theme.of(context) // The text theme goes here
+                  .textTheme
+                  .copyWith(caption: new TextStyle(color: Colors.white))),
+          child: BottomNavigationBar(
+            currentIndex: 0, // Set initial state of BottomNavigationBar
+            items: [          // Create your BottomNavigationBar items
+              BottomNavigationBarItem(
+                icon: new Icon(Icons.playlist_add),
+                title: new Text("Playlist"),
+              ),
+              BottomNavigationBarItem(
+                  icon: new Icon(Icons.person), title: new Text("My Profile")),
+              BottomNavigationBarItem(
+                  icon: new Icon(Icons.mail), title: new Text("Inbox"))
+            ],
+          ),
+        ),
+        body:...
+     );
+ ```
+ 
+ ### Prepare for Navigation
+ 
+ You'd definetly want to navigate between multiple pages using bottom navigation bar. Here is how you can do that seamlessly!
+ 
+ ##### Step 1:
+      Add two new instance properties to your State class. Something like this:
+ ```dart
+       class _FreeDemoState extends State<FreeDemo> {
+              int _currentIndex = 0;
+              final List<Widget> _children = [];
+             ...
+ ```
+ 
+  ##### Step 2:
+      Add children to a list in your State class. Something like this:
+ ```dart
+    // Declare all the widgets you want to navigate on bottom bar item click
+    final List<Widget> _children = [
+    PlaceholderWidget(Colors.white), 
+    PlaceholderWidget(Colors.green),
+    PlaceholderWidget(Colors.blue)
+  ];
+ ```
+  ##### Step 3:
+      Create a function that will update the value of _currentIndex in your State class.
+      It'd be called when user taps on a bottombar item. Something like this:
+ ```dart
+    void onTabTapped(int index) {
+   setState(() {
+     _currentIndex = index;
+   });
+ }
+ ```
+ 
+ ##### Step 4:
+     Create a class called PlaceholderWidget.This widget will be displayed when Bottom bar is tapped.
+ ```dart
+import 'package:flutter/material.dart';
+
+class PlaceholderWidget extends StatelessWidget {
+  final Color color;
+
+  PlaceholderWidget(this.color);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: color,
+      child: new Center(
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new Text(
+              'Try me!',
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 100.0,
+                fontFamily: 'Roboto',
+              ),
+            ),
+           ...
+          ],
+        ),
+      ),
+    );
+  }
+}
+ ```
+  ##### Step 5:
+     Create a class called PlaceholderWidget.This widget will be displayed when Bottom bar is tapped.
+ ```dart
+@override
+ Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(
+       title: Text('My Flutter App'),
+     ),
+     bottomNavigationBar: Theme(
+          data: Theme.of(context).copyWith(
+              canvasColor: Colors.blueAccent,
+              primaryColor: Colors.white30,
+              textTheme: Theme.of(context)
+                  .textTheme
+                  .copyWith(caption: new TextStyle(color: Colors.white))),
+          child: BottomNavigationBar(
+            currentIndex: _currentIndex, // Set the value of _currentIndex to currentIndex
+            onTap: onTabTapped,       // Set the onTabTapped function we creatd earlier
+            items: [
+              BottomNavigationBarItem(
+                icon: new Icon(Icons.playlist_add),
+                title: new Text("Playlist"),
+              ),
+              BottomNavigationBarItem(
+                  icon: new Icon(Icons.person), title: new Text("My Profile")),
+              BottomNavigationBarItem(
+                  icon: new Icon(Icons.mail), title: new Text("Inbox"))
+            ],
+          ),
+        ),
+        body:_children[_currentIndex] // Change Widget based on item selected
+   );
+ }
+ ```
+##### Yaaaaaaaassssss!!!! We just did it! Take a look at the result
+<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-1.png" width="280"/> <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-2.png" width="280"/> 
+ 
+ 
+## Tabs
+
+Working with tabs is a common pattern in apps following the Material Design guidelines. 
+Flutter includes a convenient way to create tab layouts as part of the material library.
+To quickly implement tabs in your next project, follow these 3 steps:
+
+
+ ### Step 1
+    Create a TabController widget, which allows you to keep a selected tab and content sections in sync.
+    
+   
+   ```dart
+ return MaterialApp(
+      home: DefaultTabController(
+        length: 3, // The number of tabs / content sections we need to display
+        child:.. // See next step!
+      ),
+    );
+ ```
+  ### Step 2
+    Now we can create 3 tabs for the TabController we initialized earlier using TabBar!
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/tabs.gif" width="280"/> 
+   
+   ```dart
+       return MaterialApp(
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.home)),
+                Tab(icon: Icon(Icons.people)),
+                Tab(icon: Icon(Icons.mail)),
+              ],
+            ),
+            title: Text('Flutter Tabs Example'), // You can declare a title for your tab
+          ),
+          body: ... // See next step for this!
+        ),
+      ),
+    );
+ ```
+  ### Step 3
+    Now that we have tabs, we’ll want to display content when a tab is selected. 
+    For this demo, we’ll employ the TabBarView Widget.
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/tabs.gif" width="280"/> 
+   
+   ```dart
+            return MaterialApp(
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.home)),
+                Tab(icon: Icon(Icons.people)),
+                Tab(icon: Icon(Icons.mail)),
+              ],
+            ),
+            title: Text('Flutter Tabs Example'),
+          ),
+          body: TabBarView(
+            children: [
+              FirstPlaceHolder(), // Create a widget class called FirstPlaceHolder
+              SecondPlaceHolder(), // Create a widget class called SecondPlaceHolder
+              ThirdPlaceHolder() //// Create a widget class called ThirdPlaceHolder
+            ],
+          ),
+        ),
+      ),
+    );
+ ```
+ 
+ ## Navigation Drawer
+
+There are situations whereby there won't be insufficient space to support tabs. Drawers provide a handy alternative at this point.
+In Flutter, we can use the Drawer Widget in combination with a Scaffold to create a layout with a Material Design Drawer.
+
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/navigation-drawer.gif" width="280"/> 
+ 
+ The code snippet below shows you how to get this done quickly.
+   
+ ```dart
+import 'package:flutter/material.dart';
+import 'package:oamp/app/screens/form_validation.dart';
+import 'package:oamp/app/screens/place_holder.dart';
+
+class FreeDemo extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new FreeDemoState();
+  }
+}
+
+class FreeDemoState extends State<FreeDemo>
+    with SingleTickerProviderStateMixin {
+  int _selectedIndex = 0;
+
+  final drawerItems = [
+    new DrawerItem("Home", Icons.home),
+    new DrawerItem("Menu", Icons.fastfood),
+    new DrawerItem("Favorites", Icons.favorite)
+  ];
+  _getDrawerItemScreen(int pos) {
+    return new PlaceholderWidget(Colors.white);
+  }
+
+  _onSelectItem(int index) {
+    setState(() {
+      _selectedIndex = index;
+      _getDrawerItemScreen(_selectedIndex);
+    });
+    Navigator.of(context).pop(); // close the drawer
+  }
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> drawerOptions =[];
+    for(var i=0; i<drawerItems.length;i++){
+      var d=drawerItems[i];
+      drawerOptions.add(new ListTile(
+        leading: new Icon(d.icon),
+        title: new Text(
+          d.title,
+          style: new TextStyle(fontSize: 19.0, fontWeight: FontWeight.w400),
+        ),
+        selected: i == _selectedIndex,
+        onTap: () =>_onSelectItem(i),
+      ));
+    }
+    return Scaffold(
+          appBar: AppBar(
+            title: Text('Navigation Drawer Example'),
+          ),
+          drawer: new Drawer(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: <Widget>[
+                new UserAccountsDrawerHeader(
+                    accountName: new Text(
+                      "Temidayo Adefioye",
+                      style: new TextStyle(
+                        fontWeight: FontWeight.w500, fontSize: 18.0
+                      ),
+                    ),
+                    accountEmail: Text(
+                      "temidjoy@gmail.com",
+                      style: new TextStyle(
+                        fontSize: 18.0, fontWeight: FontWeight.w500
+                      ),
+                    ),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Text('TA'),
+                ),),
+                new Column(children: drawerOptions,)
+              ],
+            ),
+          ),
+          body: _getDrawerItemScreen(_selectedIndex),
+    );
+  }
+}
+class DrawerItem {
+  String title;
+  IconData icon;
+
+  DrawerItem(this.title, this.icon);
+} 
+```
