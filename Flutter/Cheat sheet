@@ -14,6 +14,7 @@
    ```dart
    Row(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  
   children: [
     Image.asset('img/1.jpg'),
     Image.asset('img/2.jpg'),
