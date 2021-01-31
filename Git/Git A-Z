@@ -1,4 +1,4 @@
-## :Install GIT 2:
+Install GIT 2:
 # rpm -ivh endpoint-repo.1.7.rpm
 # yum install git
 # git --version
@@ -12,7 +12,7 @@ Create GIT repo or initialized git:
 
 Set identity to git, that recorded in version log
 # git config --global user.name “Vilsi”
-# git config --global user.email “vilsi@lw.com”
+# git config --global user.email “v@lw.com”
 
 Git States with Local:
 Working Directory : all files present in above “demo” folder
@@ -81,11 +81,11 @@ Get clone of project over the network using ssh:
 
 
 
-## :Get git help of subcommand:
+Get git help of subcommand:
 # git help log
 # git log --oneline --graph --decorate --all
 
-## :Create alias in git:
+Create alias in git:
 # git config --global alias.hist “log --oneline --graph --decorate --all”
 # git config --global --list
 # git hist
@@ -102,11 +102,11 @@ Delete file in git
 # git commit -m “comment delete” file.txt
 # git commit -m “commit delete” file.txt
 
-## :Managing file deleting or copy from outside working directory:
+Managing file deleting or copy from outside working directory:
 # cp outfile.txt   demo/
 # rm text.txt
 
-## :To update git for deletion
+To update git for deletion
 # git add -u
 
 For all modification
@@ -125,6 +125,7 @@ Let say, we want to ignore all file with png extension
 
 # touch my.png
 # git status
+
 
 
 
