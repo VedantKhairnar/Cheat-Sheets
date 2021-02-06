@@ -26,3 +26,14 @@
 
 - [Redux Cheatsheet](https://devhints.io/redux)
 
+- [VueJS Cheatsheet](https://github.com/dekadentno/vue-cheat-sheet)
+
+- [SASS Cheatsheet](https://gist.github.com/hofmannsven/b219051467f86f2ac469)
+
+- [TypeScript Cheatsheet](https://github.com/typescript-cheatsheets/react)
+
+- [ES6 Cheatsheet](http://www.developer-cheatsheets.com/es6)
+
+- [TailwindCSS Cheatsheets](https://nerdcave.com/tailwind-cheat-sheet)
+
+- [MERN Cheatsheet](https://dev.to/thamaraiselvam/mean-stack-cheat-sheet-5a1n)
