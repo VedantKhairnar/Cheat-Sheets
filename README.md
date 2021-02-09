@@ -67,6 +67,7 @@ Open Source Event:
 
 - Min 5 cheatsheets are must for contribution for DWOC.
 - Only 1 time contribution is allowed for getting considered in DWOC
+- Directly make the PR
 
 ## Contributors 🌟 
 
