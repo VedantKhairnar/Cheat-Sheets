@@ -1,0 +1,52 @@
+Docker Cheat Sheet is a nice documentation. It provides us Docker basic commands and system and It's easy to understand. But there are less exaples, I reconstructed it with real examples. You should refer above document about installation.
+
+Set up
+Pull a base image.
+
+docker pull ubuntu
+It's annoy to restore Container ID, you may forget to restore. You can set below alias. With this, you can get the ID of the last-run Container (15 Docker tips in 5 minutes)
+
+alias dl='docker ps -l -q'
+Container
+To create a Container.
+
+docker run -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
+To stop a Container.
+
+docker stop `dl`
+To start a Container.
+
+docker start `dl`
+To restart a Container.
+
+docker restart `dl`
+To Connect to a running Container.
+
+docker attach `dl`
+To copy file in a Container to the host.
+
+docker cp `dl`:/etc/passwd .
+To mount the directory in host to a Container.
+
+docker run -v /home/vagrant/test:/root/test ubuntu echo yo
+To delete a Container.
+
+dockr rm `dl`
+Info of Container
+To show running Containers. With -a option, it shows running and stopped Containers.
+
+docker ps
+To show Container information like IP adress.
+
+docker inspect `dl`
+To show log of a Container.
+
+docker logs `dl`
+To show running process in a Container.
+
+docker top `dl`
+Image
+To create a image from a Container. For tag name, <username>/<imagename> is recommended.
+
+docker run -d ubuntu /bin/sh -c "apt-get install -y hello"
+docker commit -m "My first container" `dl` tcnksm/hello
