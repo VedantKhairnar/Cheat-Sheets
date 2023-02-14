@@ -461,4 +461,4 @@ Thanks goes to these wonderful people ✨✨:
 
 Regards,
 
-[Vedant Khairnar](http://vedantkhairnar.ml/) and team.
+[Vedant Khairnar](http://vedantkhairnar.cf/) and team.
