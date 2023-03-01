@@ -10,9 +10,6 @@
 ![PRsWelcome](https://img.shields.io/badge/PRs-welcome-informational)
 
 A cheat sheet or crib sheet is a concise set of notes used for quick reference.
-# Data Science Cheatsheets
-
-List of Data Science Cheatsheets :
 
 ## Table of Contents
 - [Algorithm](https://github.com/smriti1313/Cheat-Sheets/blob/master/Algorithms/Algorithms.pdf)
