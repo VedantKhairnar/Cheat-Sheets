@@ -9,7 +9,9 @@
 ![Issues](https://img.shields.io/github/issues/VedantKhairnar/Cheat-Sheets)
 ![PRsWelcome](https://img.shields.io/badge/PRs-welcome-informational)
 
-A cheat sheet or crib sheet is a concise set of notes used for quick reference.
+```Are you tired of scouring the internet for hours on end to find the perfect reference material for your project or assignment? Look no further! Cheat Sheets is a repository of concise notes and reference material for a wide range of topics.```
+
+Whether you're a student, data scientist, programmer, or just someone who likes to learn new things, this repository has something for everyone. With cheat sheets covering topics such as Data Science, Machine Learning, Deep Learning, Business Analysis, and more, you're sure to find the reference material you need to get the job done.
 
 ## Table of Contents
 - [Algorithm](https://github.com/smriti1313/Cheat-Sheets/blob/master/Algorithms/Algorithms.pdf)
