@@ -59,6 +59,10 @@ Whether you're a student, data scientist, programmer, or just someone who likes 
 - [Quant](https://github.com/smriti1313/Cheat-Sheets/blob/master/Quant/QT%20Cheatsheet.pdf)
 - [Quantum Computing](https://github.com/smriti1313/Cheat-Sheets/blob/master/QuantumComputing/quantum_computing.pdf)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=VedantKhairnar/Cheat-Sheets&type=Date)](https://star-history.com/#VedantKhairnar/Cheat-Sheets&Date)
+
 ## Contributors 🌟 
 
 Thanks goes to these wonderful people ✨✨:
